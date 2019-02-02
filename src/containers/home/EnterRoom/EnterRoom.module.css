@@ -1,0 +1,12 @@
+.inputStyle {
+  width: 100%;
+  min-width: 250px !important; }
+
+.enterRoomContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; }
+
+.iconStyle {
+  margin-left: 10px !important; }
