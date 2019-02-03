@@ -1,0 +1,4 @@
+.textButton {
+  padding: 10px; }
+  .textButton:hover {
+    cursor: pointer; }

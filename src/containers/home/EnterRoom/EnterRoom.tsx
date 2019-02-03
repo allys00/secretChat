@@ -8,10 +8,11 @@ import classes from './EnterRoom.module.css';
 interface EnterRoomProps {
     roomCode: string,
     onChange: any,
-    onEnterRoom: any
+    onEnterRoom: any,
+    onKeyPress: any
 }
 
-const EnterRoom = ({ roomCode, onChange, onEnterRoom }: EnterRoomProps) => (
+const EnterRoom = ({ roomCode, onChange, onEnterRoom, onKeyPress }: EnterRoomProps) => (
     <div className={classes.enterRoomContent}>
         <TextField
             className={classes.inputStyle}
@@ -19,6 +20,7 @@ const EnterRoom = ({ roomCode, onChange, onEnterRoom }: EnterRoomProps) => (
             label="Código da Sala"
             value={roomCode}
             onChange={onChange}
+            onKeyPress={onKeyPress}
             variant="outlined"
         />
         <IconButton
