@@ -1,0 +1,19 @@
+.roomContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #fafafa; }
+
+.chatContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  height: 70%;
+  padding: 20px 20px;
+  box-shadow: 1px 1px 10px #ccc; }
+
+.inputSendMessage {
+  width: 100%; }

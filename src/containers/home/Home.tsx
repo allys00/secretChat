@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { ReducerState } from '../../models/reducerState';
 import { changeRoomCode, enterRoom } from './Home.actions';
 import { Home as HomeInterface } from './Home.reducer';
-import EnterRoom from './EnterRoom/EnterRoom';
+import Input from '../../components/input/Input';
 import classes from './Home.module.css';
-import TextButton from '../../components/TextButton/TextButton';
+import { Link } from 'react-router-dom';
 
 class Home extends Component<any> {
 
@@ -22,13 +22,16 @@ class Home extends Component<any> {
         const { roomCode = '' } = home as HomeInterface;
         return (
             <div className={classes.homeContainer}>
-                <EnterRoom
-                    roomCode={roomCode}
+                <Input
+                    label="Digite um código"
+                    value={roomCode}
                     onChange={({ target }: any) => changeRoomCode(target.value)}
                     onEnterRoom={() => enterRoom(roomCode)}
                     onKeyPress={this.onKeyPress}
                 />
-                <TextButton text="Criar nova sala" onClick={() => alert('create a new room')}/>
+                <Link to="/room">
+                    <p> Criar nova sala </p>
+                </Link>
             </div>
         );
     }
